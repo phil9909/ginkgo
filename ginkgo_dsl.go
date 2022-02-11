@@ -50,7 +50,7 @@ at the top of the goroutine that caused this panic.
 `
 
 func init() {
-	config.Flags(flag.CommandLine, "ginkgo", true)
+	config.Flags(flag.CommandLine, "ginkgov1", true)
 	GinkgoWriter = writer.New(os.Stdout)
 }
 

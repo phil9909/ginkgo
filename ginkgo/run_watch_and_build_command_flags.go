@@ -144,7 +144,7 @@ func (c *RunWatchAndBuildCommandFlags) flags(mode int) {
 	c.FlagSet.StringVar(c.stringSlot("vet"), "vet", "", "Configure the invocation of 'go vet' to use the comma-separated list of vet checks. If list is 'off', 'go test' does not run 'go vet' at all.")
 
 	if mode == runMode || mode == watchMode {
-		config.Flags(c.FlagSet, "", false)
+		config.Flags(c.FlagSet, "ginkgov1", false)
 		c.FlagSet.IntVar(&(c.NumCPU), "nodes", 1, "The number of parallel test nodes to run")
 		c.FlagSet.IntVar(&(c.NumCompilers), "compilers", 0, "The number of concurrent compilations to run (0 will autodetect)")
 		c.FlagSet.BoolVar(&(c.AutoNodes), "p", false, "Run in parallel with auto-detected number of nodes")
